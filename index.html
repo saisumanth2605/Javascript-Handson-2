@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Handson-2</title>
+</head>
+<body>
+    <h1><u>Javascript Handson-2</u></h1>
+    <h3>1.Calculator?Write a program to make a simple calculator using switch statement that takes operator and two numbers from user and print the result after operation.<br>
+        <u>Note:</u> You have to complete Calculator. No need to take any input</h3>
+    <pre>
+        const Calculator = (A, B, C) => 
+        {
+            switch(A)
+            {
+            case "+":
+                    return B+C;
+                    break;
+            case "-":
+                    return B-C;
+                    break;
+            case "/":
+                    return B/C;
+                    break;
+            case "*":
+                    return B*C;
+                    break;
+            }
+        };
+    </pre>
+    <h3>2.Check whether the condition is fulfilled or not? Write a program that takes a number and prints whether the number is divisible by 6 and 9 or not.<br>
+        <u>Note:</u> You have to complete Check_divisibility. No need to take any input
+    </h3>
+    <pre>
+        const Check_divisibility = (N) => 
+        {
+            if(N%6===0 && N%9===0)
+            {
+            return "Divisible by both";
+            }
+            else
+            {
+            return "Not Divisible by both";
+            }
+        };
+    </pre>
+    <h3>3.Eligible Voter? You are given an integer A, denoting the age of a person, and your task is to determine whether he/she is eligible to vote or not.
+        <u>Note:</u> You have to complete isEligible function. No need to take any input
+    </h3>
+    <pre>
+        const isEligible = (a) => 
+        {
+            if(a>=18)
+            {
+            return "Eligible for Voting";
+            }
+            else
+            {
+            return "Not Eligible for Voting";
+            }
+        };
+    </pre>
+    <h3>4.Find Relation PrepBuddy wants you to get familiar with various Relational operators. He provides you with two integer values 
+        X and Y and asks you to find the relation between them.The relationships between integers.X and Yare as follows:
+        <ul>
+            <li>If X < Y, it means that X is smaller than Y.</li>
+            <li>If X > Y,it means that X is greater than Y.</li>
+            <li>If X = Y,it means that X is equal to Y.</li>
+        </ul>
+        <u>Note:</u> You have to complete findRelationship function. No need to take any input.
+    </h3>
+    <pre>
+        const findRelation = (x,y) =>
+        {
+            if(x===y)
+            {
+            return x + ' is equal to '+ y;
+            }
+            else if (x > y)
+            { 
+            return x +' is greater than '+y;
+            }
+            else if(x < y)
+            { 
+            return x +' is smaller than ' + y;
+            }
+        };
+    </pre>
+    <h3>5.Find Grades?</h3>
+    <pre>
+        const findGrades = (a) => 
+        {
+            var grade=0;
+            if(a<=10)
+            {
+            return 'E';
+            }
+            if(a>=11 && a<=20)
+            {
+            return 'D';
+            }
+            if(a>=21 && a<=30)
+            {
+            return 'C';
+            }
+            if(a>=31 && a<=40)
+            {
+            return 'B';
+            }
+            if(a>=41 && a<=50)
+            {
+            return 'A';
+            }
+        };
+    </pre>
+    <h3>6.You are provided with a table containing some characters and their corresponding values. Your task will be to find the value from the table corresponding to an input character and return it.
+        | P or p 	- PrepBytes      	|
+        | Z or z 	- Zenith         	|
+        | E or e 	- Expert Coder   	|
+        | D or d 	- Data Structure 	|
+        <u>Note:</u> You have to complete getValue function. No need to take any input.
+    </h3>
+    <pre>
+        const getValue = (a) => 
+        {
+            var c = a;
+            if(c === 'P' || c === 'p')
+            {
+                return 'PrepBytes';
+            }
+            else if( c === 'Z' || c === 'z' )
+            {
+                return 'Zenith';
+            }
+            else if( c === 'E' || c === 'e' )
+            {
+                return 'Expert Coder';
+            }
+            else if( c === 'D' || c === 'd' )
+            {
+                return 'Data Structure';
+            }
+        };
+    </pre>
+    <h3>7.Find the maximum out of three numbers.
+        Take three numbers and print the largest number among them if all of three are same print-1.
+        <u>Note:</u> You have to complete Max_out_of_three. No need to take any input.
+    </h3>
+    <pre>
+        const Max_out_of_three = (A,B,C) => 
+        {
+            if((A==B) && (A==C))
+            {
+                return -1;
+            }
+            if((A>B) && (A>C))
+            {
+                return A;
+            }
+            if((B>A) && (B>C))
+            {
+                return B;
+            }
+            if((C>A) && (C>B))
+            {
+                return C;
+            }
+        };
+    </pre>
+    <h3>8.Second Smallest : You are given 3 distinct integers X,Y,and Z,and your task is to find and return the second smallest integer among the three provided integers.
+        <u>Note:</u> You have to complete findSndSmallest function. No need to take any input.
+    </h3>
+    <pre>
+        const findSndSmallest = (x,y,z) => 
+        {
+            // check if X is the largest or not
+            if(x>y && x >z)
+            {
+                // X is the largest
+                if(y>z)
+                {
+                // y is the second largest
+                return y;
+                }
+                else
+                {
+                // z is the second largest
+                return z;
+                }
+            }
+        /*--------------------------------------------*/
+            // check if Y is the largest or not
+            if(y>x && y >z)
+            {
+                // Y is the largest
+                if(x>z)
+                {
+                // x is the second largest
+                return x;
+                }
+                else
+                {
+                // z is the second largest
+                return z;
+                }
+            }
+        /*--------------------------------------------*/
+            // check if z is the largest or not
+            if(z>x && z>y)
+            {
+                // Z is the largest
+                if(x>y)
+                {
+                // x is the second largest
+                return x;
+                }
+                else
+                {
+                // y is the second largest
+                return y;
+                }
+            }
+        };
+    </pre>
+    <h3>9.Check whether the triangle is Acute or Obtuse
+        Write a program takes takes three angles and checks whether the triangle is acute or obtuse.
+        <u>Note:</u> You have to complete Triangle_Check. No need to take any input
+    </h3>
+    <pre>
+        const Triangle_Check = (A,B,C) => 
+        {
+            if(A>90 || B>90 ||C>90)
+            {
+                return "obtuse"
+            }
+            else
+            {
+                return "acute"
+            }  
+        };
+   </pre>
+</body>
+</html>
